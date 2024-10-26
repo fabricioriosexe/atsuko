@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 const directors = [
     {
         name: "Director 1",
-        image: "./public/img/proyecto.png", 
+        image: "/img/proyecto.png", 
         link: "/director1",
     },
     {
         name: "Director 2",
-        image: "./public/img/proyecto.png", 
+        image: "/img/proyecto.png", 
         link: "/director2",
     },
     {
         name: "Director 3",
-        image: "./public/img/proyecto.png", 
+        image: "/img/proyecto.png", 
         link: "/director3",
     },
     {
         name: "Director 4",
-        image: "./public/img/proyecto.png", 
+        image: "/img/proyecto.png", 
         link: "/director4",
     },
 ];
