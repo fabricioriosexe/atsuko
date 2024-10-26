@@ -4,37 +4,37 @@ import { Link } from 'react-router-dom';
 const projects = [
     {
         title: "Proyecto 1",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project1",
     },
     {
         title: "Proyecto 2",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project2",
     },
     {
         title: "Proyecto 3",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project3",
     },
     {
         title: "Proyecto 4",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project4",
     },
     {
         title: "Proyecto 5",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project5",
     },
     {
         title: "Proyecto 6",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project6",
     },
     {
         title: "Proyecto 7",
-        imgSrc: "/public/img/proyecto.png",
+        img: "/public/img/proyecto.png",
         link: "/project7",
     },
     // Agrega más proyectos si es necesario
