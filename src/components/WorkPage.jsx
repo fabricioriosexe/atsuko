@@ -4,37 +4,37 @@ import { Link } from 'react-router-dom';
 const projects = [
     {
         title: "Proyecto 1",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project1",
     },
     {
         title: "Proyecto 2",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project2",
     },
     {
         title: "Proyecto 3",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project3",
     },
     {
         title: "Proyecto 4",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project4",
     },
     {
         title: "Proyecto 5",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project5",
     },
     {
         title: "Proyecto 6",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project6",
     },
     {
         title: "Proyecto 7",
-        image: "https://github.com/DaniOr27/atsuko/blob/master/public/img/proyecto.png?raw=true",
+        image: "/public/img/proyecto.png?raw=true",
         link: "/project7",
     },
     // Agrega más proyectos si es necesario
