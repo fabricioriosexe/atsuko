@@ -15,7 +15,7 @@ body {
 
 @font-face {
     font-family: 'Japanese 3017'; /* Nombre de la fuente */
-    src: url('../public/fonts/Japanese\ 3017.ttf') format('truetype'); /* Ruta de la fuente */
+    src: url('https://github.com/DaniOr27/atsuko/blob/master/public/fonts/Japanese%203017.ttf') format('truetype'); /* Ruta de la fuente */
     font-weight: normal; /* Ajusta según sea necesario */
     font-style: normal; /* Ajusta según sea necesario */
 }
