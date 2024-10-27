@@ -1,30 +1,72 @@
-import React from 'react'; 
-import { Link } from 'react-router-dom'; 
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function HomePage() {
+function ReelPage() {
+    const [activeSection, setActiveSection] = useState("REEL");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
-        <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4">
-            <h1 className="text-6xl md:text-9xl font-bold tracking-wide mb-4 text-custom-red">Atsuko</h1> 
-            <p className=" text-lg tracking-widest mb-10">ultimo trabajo</p>
+        <div className="bg-black text-white min-h-screen relative">
+            {/* Header */}
+            <header className="flex justify-between items-center py-4 px-4 ">
+                <Link to="/" className="text-2xl font-bold text-custom-red">Atsuko</Link>
+                
+                <div className="md:hidden">
+                    <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <span className="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
 
-            <div className="w-full max-w-3xl h-64 bg-black border border-gray-500 flex items-center justify-center mb-10">
-                {/* Contenedor para el video, con un borde gris */}
-                <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
-                    <source src="/path/to/video.mp4" type="video/mp4" />
-                    {/* Video que se reproduce automáticamente, en bucle y en silencio */}
+                {/* Menú para pantallas grandes */}
+                <nav className={`hidden md:flex space-x-8 text-lg uppercase `}>
+                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
+                        <Link
+                            key={section}
+                            to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
+                            className={`hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
+                            onClick={() => {
+                                setActiveSection(section);
+                            }}
+                        >
+                            {section}
+                        </Link>
+                    ))}
+                </nav>
+            </header>
+
+            {/* Menú hamburguesa para pantallas pequeñas */}
+            {isMenuOpen && (
+                <div className="absolute top-16 left-0 right-0 bg-black p-4 z-10 flex flex-col items-center ">
+                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
+                        <Link
+                            key={section}
+                            to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
+                            className={`block py-2 hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
+                            onClick={() => {
+                                setActiveSection(section);
+                                setIsMenuOpen(false); // Cierra el menú al hacer clic en un enlace
+                            }}
+                        >
+                            {section}
+                        </Link>
+                    ))}
+                </div>
+            )}
+
+            {/* Video central */}
+            <div className="flex items-center justify-center py-10">
+                <video 
+                    className="w-3/4 h-64 object-cover" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                >
+                    <source src="/path/to/your/reel-video.mp4" type="video/mp4" />
                 </video>
-            </div>
-
-            <div className="flex flex-col md:flex-row md:space-x-10 md:space-y-0 space-y-4 text-lg uppercase tracking-widest items-center ">
-                {/* Menú inferior, con espacios entre elementos y texto en mayúsculas */}
-                <Link to="/work" className="hover:text-gray-400">Work</Link>
-                <Link to="/reel" className="hover:text-gray-400">Reel</Link>
-                <Link to="/directores" className="hover:text-gray-400">Directors</Link>
-                <Link to="/staff" className="hover:text-gray-400">Staff</Link>
-                <Link to="/contact" className="hover:text-gray-400">Contact</Link>
             </div>
         </div>
     );
 }
 
-export default HomePage;
+export default ReelPage;
