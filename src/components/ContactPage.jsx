@@ -24,8 +24,8 @@ function ContactPage() {
             </div>
 
             {/* Header */}
-            <header className="flex justify-between items-center py-4 px-4 relative z-10">
-                <Link to="/" className="text-2xl font-bold">Atsuko</Link>
+            <header className="flex justify-between items-center py-4 px-4 relative z-10 ">
+                <Link to="/" className="text-2xl font-bold text-custom-red">Atsuko</Link>
                 
                 <div className="md:hidden">
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -39,7 +39,7 @@ function ContactPage() {
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`}
-                            className={`hover:text-gray-400 ${activeSection === section ? "underline" : ""}`}
+                            className={`hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
                             onClick={() => setActiveSection(section)}
                         >
                             {section}
@@ -55,7 +55,7 @@ function ContactPage() {
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`}
-                            className={`block py-2 hover:text-gray-400 ${activeSection === section ? "underline" : ""}`}
+                            className={`block py-2 hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
                             onClick={() => {
                                 setActiveSection(section);
                                 setIsMenuOpen(false); // Cierra el menú al hacer clic en un enlace
@@ -70,7 +70,7 @@ function ContactPage() {
             {/* Contenido del ContactPage */}
             <div className="relative flex-1 flex flex-col justify-center items-center md:flex-row">
                 <div className="relative z-10 flex flex-col justify-center items-center p-4 w-full md:w-1/3 text-center">
-                    <h2 className="text-6xl font-bold mb-4 tracking-widest">Contact</h2>
+                    <h2 className="text-6xl font-bold mb-4 tracking-widest text-custom-red">Contact</h2>
 
                     {/* Íconos de contacto */}
                     <div className="text-lg mb-2 flex items-center space-x-4 tracking-widest">
