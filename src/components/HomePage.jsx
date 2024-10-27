@@ -8,7 +8,7 @@ function HomePage() {
             <img 
                 src="/img/Atsuko.png"
                 alt="Atsuko Logo"
-                className="w-80 md:w-2/5 lg:w-144 xl:w-192 mb-4 mx-auto"
+                className="w-80 md:w-4/5 lg:w-144 xl:w-192 mb-4 mx-auto"
             />
 
             <p className="text-lg tracking-widest mb-10 ">ultimo trabajo</p>
