@@ -17,11 +17,11 @@ function HomePage() {
 
             <div className="flex flex-col md:flex-row md:space-x-10 md:space-y-0 space-y-4 text-lg uppercase tracking-widest items-center ">
                 {/* Menú inferior, con espacios entre elementos y texto en mayúsculas */}
-                <Link to="/work" className="hover:text-gray-400">Work</Link>
-                <Link to="/reel" className="hover:text-gray-400">Reel</Link>
+                <Link to="/work" className="hover:text-custom-red">Work</Link>
+                <Link to="/reel" className="hover:text-custom-red">Reel</Link>
                 {/* <Link to="/directores" className="hover:text-gray-400">Directors</Link> */}
-                <Link to="/staff" className="hover:text-gray-400">Staff</Link>
-                <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+                <Link to="/staff" className="hover:text-custom-red">Staff</Link>
+                <Link to="/contact" className="hover:text-custom-red">Contact</Link>
             </div>
         </div>
     );
