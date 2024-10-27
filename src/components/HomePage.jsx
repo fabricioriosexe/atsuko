@@ -19,7 +19,7 @@ function HomePage() {
                 {/* Menú inferior, con espacios entre elementos y texto en mayúsculas */}
                 <Link to="/work" className="hover:text-gray-400">Work</Link>
                 <Link to="/reel" className="hover:text-gray-400">Reel</Link>
-                <Link to="/directores" className="hover:text-gray-400">Directors</Link>
+                {/* <Link to="/directores" className="hover:text-gray-400">Directors</Link> */}
                 <Link to="/staff" className="hover:text-gray-400">Staff</Link>
                 <Link to="/contact" className="hover:text-gray-400">Contact</Link>
             </div>
