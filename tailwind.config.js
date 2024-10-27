@@ -7,8 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['sans-serif']
-      }
+        'sans': ['sans-serif'],
+      },
+      colors: {
+        'custom-red': '#AD0505',
+      },
     },
   },
   plugins: [],
