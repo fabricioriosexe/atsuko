@@ -69,14 +69,13 @@ function ContactPage() {
 
             {/* Contenido del ContactPage */}
             <div className="relative flex-1 flex flex-col justify-center items-center md:flex-row">
-                {/* Información de contacto centrada */}
                 <div className="relative z-10 flex flex-col justify-center items-center p-4 w-full md:w-1/3 text-center">
-                    <h2 className="text-6xl font-bold mb-4">Contact</h2>
+                    <h2 className="text-6xl font-bold mb-4 tracking-widest">Contact</h2>
 
                     {/* Íconos de contacto */}
                     <div className="text-lg mb-2 flex items-center space-x-4 tracking-widest">
                         <img src="/icons/emailIcon.svg" alt="Email Icon" className="w-8 h-8" />
-                        <span>agenciaatsuko@gmail.com</span>
+                        <span className="font-sans">agenciaatsuko@gmail.com</span>
                     </div>
                     <div className="text-lg mb-2 flex items-center space-x-4 tracking-widest">
                         <img src="/icons/instagramIcon.svg" alt="Instagram Icon" className="w-8 h-8" />
@@ -84,7 +83,7 @@ function ContactPage() {
                             href="https://www.instagram.com/atsuko.oficial/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-lg text-white hover:underline"
+                            className="text-lg text-white hover:underline font-sans"
                         >
                             @atsuko.oficial
                         </a>
