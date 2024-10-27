@@ -32,7 +32,13 @@ function StaffPage() {
         <div className="bg-black text-white min-h-screen relative">
             {/* Header */}
             <header className="flex justify-between items-center py-4 px-4 ">
-                <Link to="/" className="text-2xl font-bold text-custom-red">Atsuko</Link>
+                <Link to="/">
+                    <img
+                        src="/img/Atsuko.png"
+                        alt="Atsuko Logo"
+                        className="w-24 md:w-28 lg:w-32 xl:w-36" // Ajusta los tamaños aquí
+                    />
+                </Link>
                 
                 <div className="md:hidden">
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
