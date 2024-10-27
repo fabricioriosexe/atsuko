@@ -6,7 +6,7 @@ function HomePage() {
         <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4">
             {/* Imagen centrada en lugar del h1 */}
             <img 
-                src="/img/Atsuko.png"
+                src="/img/Atsuko2.png"
                 alt="Atsuko Logo"
                 className="w-80 md:w-4/5 lg:w-144 xl:w-192 mb-4 mx-auto"
             />
