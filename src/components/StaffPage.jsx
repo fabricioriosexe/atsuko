@@ -31,8 +31,8 @@ function StaffPage() {
     return (
         <div className="bg-black text-white min-h-screen relative">
             {/* Header */}
-            <header className="flex justify-between items-center py-4 px-4">
-                <Link to="/" className="text-2xl font-bold">Atsuko</Link>
+            <header className="flex justify-between items-center py-4 px-4 ">
+                <Link to="/" className="text-2xl font-bold text-custom-red">Atsuko</Link>
                 
                 <div className="md:hidden">
                     <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -41,13 +41,15 @@ function StaffPage() {
                 </div>
 
                 {/* Menú para pantallas grandes */}
-                <nav className={`hidden md:flex space-x-8 text-lg uppercase`}>
-                    {["WORK", "REEL", "STAFF", "CONTACT"].map((section) => (
+                <nav className={`hidden md:flex space-x-8 text-lg uppercase `}>
+                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
-                            className={`hover:text-gray-400 ${activeSection === section ? "underline" : ""}`}
-                            onClick={() => setActiveSection(section)}
+                            className={`hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
+                            onClick={() => {
+                                setActiveSection(section);
+                            }}
                         >
                             {section}
                         </Link>
@@ -57,12 +59,12 @@ function StaffPage() {
 
             {/* Menú hamburguesa para pantallas pequeñas */}
             {isMenuOpen && (
-                <div className="absolute top-16 left-0 right-0 bg-black p-4 z-10 flex flex-col items-center">
-                    {["WORK", "REEL", "STAFF", "CONTACT"].map((section) => (
+                <div className="absolute top-16 left-0 right-0 bg-black p-4 z-10 flex flex-col items-center ">
+                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
-                            className={`block py-2 hover:text-gray-400 ${activeSection === section ? "underline" : ""}`}
+                            className={`block py-2 hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
                             onClick={() => {
                                 setActiveSection(section);
                                 setIsMenuOpen(false); // Cierra el menú al hacer clic en un enlace
@@ -76,7 +78,7 @@ function StaffPage() {
 
             {/* Galería de Staff */}
             <div className="flex flex-col items-center py-10">
-                <h2 className="text-6xl font-bold tracking-wide mb-10">STAFF</h2>
+                <h2 className="text-6xl font-bold tracking-wide mb-10 text-custom-red">STAFF</h2>
                 <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {staffMembers.map((member, index) => (
                         <div
