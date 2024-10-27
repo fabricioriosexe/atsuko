@@ -1,105 +1,30 @@
-import React, { useState } from 'react'; 
+import React from 'react'; 
 import { Link } from 'react-router-dom'; 
 
-const staffMembers = [
-    {
-        name: "Staff 1",
-        position: "Cargo 1",
-        image: "/img/proyecto.png", 
-    },
-    {
-        name: "Staff 2",
-        position: "Cargo 2",
-        image: "/img/proyecto.png", 
-    },
-    {
-        name: "Staff 3",
-        position: "Cargo 3",
-        image: "/img/proyecto.png", 
-    },
-    {
-        name: "Staff 4",
-        position: "Cargo 4",
-        image: "/img/proyecto.png", 
-    },
-];
-
-function StaffPage() {
-    const [activeSection, setActiveSection] = useState("STAFF"); 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+function HomePage() {
     return (
-        <div className="bg-black text-white min-h-screen relative">
-            {/* Header */}
-            <header className="flex justify-between items-center py-4 px-4 ">
-                <Link to="/" className="text-2xl font-bold text-custom-red">Atsuko</Link>
-                
-                <div className="md:hidden">
-                    <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                        <span className="material-symbols-outlined">menu</span>
-                    </button>
-                </div>
+        <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4">
+            <h1 className="text-6xl md:text-9xl font-bold tracking-wide mb-4 text-custom-red">Atsuko</h1> 
+            <p className=" text-lg tracking-widest mb-10">ultimo trabajo</p>
 
-                {/* Menú para pantallas grandes */}
-                <nav className={`hidden md:flex space-x-8 text-lg uppercase `}>
-                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
-                        <Link
-                            key={section}
-                            to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
-                            className={`hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
-                            onClick={() => {
-                                setActiveSection(section);
-                            }}
-                        >
-                            {section}
-                        </Link>
-                    ))}
-                </nav>
-            </header>
+            <div className="w-full max-w-3xl h-64 bg-black border border-gray-500 flex items-center justify-center mb-10">
+                {/* Contenedor para el video, con un borde gris */}
+                <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
+                    <source src="/path/to/video.mp4" type="video/mp4" />
+                    {/* Video que se reproduce automáticamente, en bucle y en silencio */}
+                </video>
+            </div>
 
-            {/* Menú hamburguesa para pantallas pequeñas */}
-            {isMenuOpen && (
-                <div className="absolute top-16 left-0 right-0 bg-black p-4 z-10 flex flex-col items-center ">
-                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
-                        <Link
-                            key={section}
-                            to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
-                            className={`block py-2 hover:text-custom-red ${activeSection === section ? "underline" : ""}`}
-                            onClick={() => {
-                                setActiveSection(section);
-                                setIsMenuOpen(false); // Cierra el menú al hacer clic en un enlace
-                            }}
-                        >
-                            {section}
-                        </Link>
-                    ))}
-                </div>
-            )}
-
-            {/* Galería de Staff */}
-            <div className="flex flex-col items-center py-10">
-                <h2 className="text-6xl font-bold tracking-wide mb-10 text-custom-red">STAFF</h2>
-                <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {staffMembers.map((member, index) => (
-                        <div
-                            key={index}
-                            className="flex flex-col items-center"
-                        >
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-full h-64 object-cover rounded-lg"
-                            />
-                            <div className="text-center mt-2">
-                                <span className="block text-lg font-bold">{member.name}</span>
-                                <span className="block text-sm">{member.position}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <div className="flex flex-col md:flex-row md:space-x-10 md:space-y-0 space-y-4 text-lg uppercase tracking-widest items-center ">
+                {/* Menú inferior, con espacios entre elementos y texto en mayúsculas */}
+                <Link to="/work" className="hover:text-gray-400">Work</Link>
+                <Link to="/reel" className="hover:text-gray-400">Reel</Link>
+                <Link to="/directores" className="hover:text-gray-400">Directors</Link>
+                <Link to="/staff" className="hover:text-gray-400">Staff</Link>
+                <Link to="/contact" className="hover:text-gray-400">Contact</Link>
             </div>
         </div>
     );
 }
 
-export default StaffPage;
+export default HomePage;
