@@ -42,7 +42,7 @@ function StaffPage() {
 
                 {/* Menú para pantallas grandes */}
                 <nav className={`hidden md:flex space-x-8 text-lg uppercase`}>
-                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
+                    {["WORK", "REEL", "STAFF", "CONTACT"].map((section) => (
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
@@ -58,7 +58,7 @@ function StaffPage() {
             {/* Menú hamburguesa para pantallas pequeñas */}
             {isMenuOpen && (
                 <div className="absolute top-16 left-0 right-0 bg-black p-4 z-10 flex flex-col items-center">
-                    {["WORK", "REEL", "DIRECTORES", "STAFF", "CONTACT"].map((section) => (
+                    {["WORK", "REEL", "STAFF", "CONTACT"].map((section) => (
                         <Link
                             key={section}
                             to={`/${section.toLowerCase()}`} // Cambiar a la ruta correspondiente
