@@ -1,6 +1,10 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 
+// Importar los íconos SVG
+/* import { ReactComponent as EmailIcon } from '../public/icons/emailIcon.svg';
+import { ReactComponent as InstagramIcon } from '../public/icons/instagramIcon.svg'; */
+
 function ContactPage() {
     const [activeSection, setActiveSection] = useState("CONTACT");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,8 +72,14 @@ function ContactPage() {
                 {/* Información de contacto centrada */}
                 <div className="relative z-10 flex flex-col justify-center items-center p-4 w-full md:w-1/3 text-center">
                     <h2 className="text-6xl font-bold mb-4">Contact</h2>
-                    <p className="text-lg mb-2 tracking-widest">Correo: contacto@atsuko.com</p>
-                    <p className="text-lg mb-2 tracking-widest">Instagram: 
+
+                    {/* Íconos de contacto */}
+                    <div className="text-lg mb-2 flex items-center space-x-4 tracking-widest">
+                        <img src="/icons/emailIcon.svg" alt="Email Icon" className="w-8 h-8" />
+                        <span>agenciaatsuko@gmail.com</span>
+                    </div>
+                    <div className="text-lg mb-2 flex items-center space-x-4 tracking-widest">
+                        <img src="/icons/instagramIcon.svg" alt="Instagram Icon" className="w-8 h-8" />
                         <a
                             href="https://www.instagram.com/atsuko.oficial/"
                             target="_blank"
@@ -78,7 +88,7 @@ function ContactPage() {
                         >
                             @atsuko.oficial
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
