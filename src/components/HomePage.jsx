@@ -1,8 +1,31 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'; 
+import { Link } from 'react-router-dom'; 
 
-function ReelPage() {
-    const [activeSection, setActiveSection] = useState("REEL");
+const staffMembers = [
+    {
+        name: "Staff 1",
+        position: "Cargo 1",
+        image: "/img/proyecto.png", 
+    },
+    {
+        name: "Staff 2",
+        position: "Cargo 2",
+        image: "/img/proyecto.png", 
+    },
+    {
+        name: "Staff 3",
+        position: "Cargo 3",
+        image: "/img/proyecto.png", 
+    },
+    {
+        name: "Staff 4",
+        position: "Cargo 4",
+        image: "/img/proyecto.png", 
+    },
+];
+
+function StaffPage() {
+    const [activeSection, setActiveSection] = useState("STAFF"); 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -53,20 +76,30 @@ function ReelPage() {
                 </div>
             )}
 
-            {/* Video central */}
-            <div className="flex items-center justify-center py-10">
-                <video 
-                    className="w-3/4 h-64 object-cover" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                >
-                    <source src="/path/to/your/reel-video.mp4" type="video/mp4" />
-                </video>
+            {/* Galería de Staff */}
+            <div className="flex flex-col items-center py-10">
+                <h2 className="text-6xl font-bold tracking-wide mb-10 text-custom-red">STAFF</h2>
+                <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {staffMembers.map((member, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center"
+                        >
+                            <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-full h-64 object-cover rounded-lg"
+                            />
+                            <div className="text-center mt-2">
+                                <span className="block text-lg font-bold">{member.name}</span>
+                                <span className="block text-sm">{member.position}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
 }
 
-export default ReelPage;
+export default StaffPage;
