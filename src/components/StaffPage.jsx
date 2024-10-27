@@ -34,7 +34,7 @@ function StaffPage() {
             <header className="flex justify-between items-center py-4 px-4 ">
                 <Link to="/">
                     <img
-                        src="/img/Atsuko.png"
+                        src="/img/Atsuko2.png"
                         alt="Atsuko Logo"
                         className="w-24 md:w-28 lg:w-32 xl:w-36" // Ajusta los tamaños aquí
                     />
