@@ -1,13 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
 
-const projects = [
-    {
-        title: "Proyecto 1",
-        image: "/img/proyecto.png", 
-        link: "/project1",
-    },
-    {
         title: "Proyecto 2",
         image: "/img/proyecto.png", 
         link: "/project2",
